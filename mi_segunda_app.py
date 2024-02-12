@@ -1,6 +1,6 @@
 import streamlit as st
 
-# Funciones de conversión
+# Funciones de conversión para temperatura
 def temperatura(conversion, valor):
     if conversion == "Celsius a Fahrenheit":
         return (valor * 9/5) + 32
@@ -10,7 +10,8 @@ def temperatura(conversion, valor):
         return valor + 273.15
     elif conversion == "Kelvin a Celsius":
         return valor - 273.15
-
+        
+# Funciones de conversión para longitud
 def longitud(conversion, valor):
     if conversion == "Pies a metros":
         return valor * 0.3048
@@ -20,6 +21,7 @@ def longitud(conversion, valor):
         return valor * 2.54
     elif conversion == "Centímetros a pulgadas":
         return valor / 2.54
+        
 # Funciones de conversión para peso/masa
 def peso_masa(conversion, valor):
     if conversion == "Libras a kilogramos":
@@ -237,6 +239,3 @@ elif categoria == "Tamaño de datos":
     valor = st.number_input("Ingresa el valor a convertir")
     resultado = tamano_datos(conversion_datos, valor)
     st.write(f"El resultado es: {resultado}")
-
-
-# Agrega más bloques de código para las otras categorías...
